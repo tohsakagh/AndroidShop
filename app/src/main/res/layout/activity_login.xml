@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/person_backgrouind"
+    android:orientation="vertical"
+    tools:context=".activity.LoginActivity">
+
+
+    <EditText
+        android:id="@+id/login_username_input"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:background="@drawable/rounded_edittext"
+        android:gravity="center"
+        android:hint="请输入用户名"
+        android:textSize="20sp" />
+
+    <EditText
+        android:id="@+id/login_password_input"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/login_username_input"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="15dp"
+        android:background="@drawable/rounded_edittext"
+        android:gravity="center"
+        android:hint="请输入密码"
+        android:inputType="textPassword"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/erroremessqge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/login_password_input"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center_vertical"
+        android:layout_marginTop="11dp"
+        android:text="用户名或密码错误，请重新输入"
+        android:textColor="#FF0000" />
+
+    <Button
+        android:id="@+id/signin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/erroremessqge"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="20dp"
+        android:background="#334cff"
+        android:text="登录"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/regist"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/erroremessqge"
+        android:layout_marginLeft="59dp"
+        android:layout_marginTop="51dp"
+        android:layout_toRightOf="@+id/signin"
+        android:text="没有账号？注册"
+        android:textColor="#7b71f9"/>
+
+    <ImageView
+        android:id="@+id/login_go_home"
+        android:src="@drawable/icon_home_selector"
+        android:layout_width="24dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/signin"
+        android:layout_height="24dp"
+        android:layout_marginTop="140dp"/>
+
+    <TextView
+        android:id="@+id/tv_first_home"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/login_go_home"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center_horizontal"
+        android:text="首页"
+        android:textColor="#FF0000" />
+
+
+</RelativeLayout>

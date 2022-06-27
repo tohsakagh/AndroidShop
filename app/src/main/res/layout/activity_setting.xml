@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/person_backgrouind"
+    android:orientation="horizontal"
+    tools:context=".activity.SettingActivity">
+
+    <RelativeLayout
+        android:id="@+id/re_setting"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="0dp"
+        android:clickable="true"
+        android:paddingLeft="0dp">
+
+        <LinearLayout
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:background="@color/white">
+
+        <ImageView
+            android:id="@+id/back"
+            android:layout_width="match_parent"
+            android:layout_height="24dp"
+            android:background="@drawable/back"
+            android:layout_gravity="center"/>
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/iv_setting"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center"
+            android:layout_marginLeft="150dp"
+            android:src="@drawable/setting" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center"
+            android:layout_marginLeft="20dp"
+            android:layout_toRightOf="@id/iv_setting"
+            android:text="信息修改"
+            android:textColor="#353535"
+            android:textSize="16sp" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/update1"
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        android:layout_below="@+id/re_setting">
+
+        <TextView
+            android:layout_width="65dp"
+            android:layout_height="match_parent"
+            android:layout_marginTop="8dp"
+            android:text="用户名："
+            android:gravity="center"
+            android:background="#E0FFFF"/>
+
+        <EditText
+            android:id="@+id/login_username_update"
+            android:layout_width="285dp"
+            android:layout_height="65dp"
+            android:layout_centerVertical="true"
+
+            android:background="#80858175"
+            android:gravity="center"
+            android:textSize="20sp"/>
+
+        <Button
+            android:id="@+id/btn_username_update"
+            android:layout_width="64dp"
+            android:layout_height="90dp"
+            android:paddingTop="0dp"
+            android:text="修改"
+            android:gravity="center"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/update2"
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        android:layout_below="@+id/update1">
+
+        <TextView
+            android:layout_width="65dp"
+            android:layout_height="match_parent"
+            android:layout_marginTop="8dp"
+            android:text="密码："
+            android:gravity="center"
+            android:background="#E0FFFF"/>
+
+        <EditText
+            android:id="@+id/login_password_update"
+            android:layout_width="285dp"
+            android:layout_height="65dp"
+            android:layout_centerVertical="true"
+            android:inputType="textPassword"
+            android:background="#80858175"
+            android:gravity="center"
+            android:textSize="20sp"/>
+
+        <Button
+            android:id="@+id/btn_password_update"
+            android:layout_width="64dp"
+            android:layout_height="90dp"
+            android:paddingTop="0dp"
+            android:text="修改"
+            android:gravity="center"/>
+
+    </LinearLayout>
+
+
+
+</RelativeLayout>

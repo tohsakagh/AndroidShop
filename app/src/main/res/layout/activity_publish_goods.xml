@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.PublishGoodsActivity"
+    android:background="@drawable/person_backgrouind"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="发布商品"
+            android:textColor="@color/red"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/lv_add_store"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/add_store"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="30dp"
+            android:text="你还没有开店, 立即开店"
+            android:textColor="#0539fa"
+            android:textSize="30dp"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/zhengti"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="商品名"
+                android:layout_marginLeft="10dp"
+                android:gravity="center"
+                android:textSize="18sp"/>
+
+            <EditText
+                android:id="@+id/goods_simple_name_input"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="商品名不能为空"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="商品照片"
+                android:layout_marginLeft="10dp"
+                android:gravity="center"
+                android:textSize="18sp"/>
+
+            <ImageView
+                android:id="@+id/photo_add"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_marginLeft="90dp"
+                android:src="@color/white"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="价格"
+                android:layout_marginLeft="10dp"
+                android:gravity="center"
+                android:textSize="18sp"/>
+
+            <EditText
+                android:id="@+id/goods_price_input"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="价格不能为空且必须为数字"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="特点"
+                android:layout_marginLeft="10dp"
+                android:gravity="center"
+                android:textSize="18sp"/>
+
+            <EditText
+                android:id="@+id/goods_description_input"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="详情页"
+                android:layout_marginLeft="10dp"
+                android:gravity="center"
+                android:textSize="18sp"/>
+
+            <EditText
+                android:id="@+id/goods_name_input"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="搜素关键词"
+                android:layout_marginLeft="10dp"
+                android:gravity="center"
+                android:textSize="18sp"/>
+
+            <EditText
+                android:id="@+id/goods_keyword_input"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="选择分类"
+                android:layout_marginLeft="10dp"
+                android:gravity="center"
+                android:textSize="18sp"/>
+
+            <Spinner
+                android:id="@+id/goods_type_choose"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="100dp"/>
+
+        </LinearLayout>
+
+
+
+        <TextView
+            android:id="@+id/error"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textColor="@color/red"
+            android:textSize="20sp"
+            android:visibility="gone"/>
+
+        <LinearLayout
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/cancel"
+                android:layout_width="100dp"
+                android:layout_height="30dp"
+                android:background="#0539fa"
+                android:textColor="@color/white"
+                android:layout_marginLeft="40dp"
+                android:text="   取消   "
+                android:textSize="20sp"
+                android:gravity="center"/>
+
+            <TextView
+                android:id="@+id/sure"
+                android:layout_width="100dp"
+                android:layout_height="30dp"
+                android:background="#0539fa"
+                android:textColor="@color/white"
+                android:layout_marginLeft="100dp"
+                android:text="   发布   "
+                android:textSize="20sp"
+                android:gravity="center"/>
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+
+</LinearLayout>

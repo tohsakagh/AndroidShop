@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.mcxtzhang.swipemenulib.SwipeMenuLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="101dp"
+    android:clickable="true"
+    android:paddingBottom="1dp">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="12dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+        <!--选中商品-->
+        <ImageView
+            android:id="@+id/iv_checked_goods"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="12dp"
+            android:src="@drawable/ic_check" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="101dp">
+            <!--商品图片-->
+            <ImageView
+                android:id="@+id/iv_goods"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginRight="12dp"
+                android:scaleType="fitXY"
+                android:src="@mipmap/ic_launcher" />
+
+            <TextView
+                android:id="@+id/tv_goods_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/iv_goods"
+                android:text="商品名"
+                android:textColor="#000"
+                android:textSize="16sp"
+                android:singleLine="true"
+                android:ellipsize="end"/>
+
+            <TextView
+                android:id="@+id/tv_goods_description"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_goods_name"
+                android:layout_marginTop="4dp"
+                android:layout_toRightOf="@+id/iv_goods"
+                android:text="商品描述"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/tv_goods_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_centerVertical="true"
+                android:layout_marginBottom="4dp"
+                android:layout_toRightOf="@+id/iv_goods"
+                android:lines="1"
+                android:text="￥100000.00"
+                android:textColor="#DF550B"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <!--改变商品数量-->
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="4dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tv_reduce_goods_num"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:background="@drawable/bg_reduce_goods_num"
+                    android:gravity="center"
+                    android:text="—"
+                    android:textColor="#000"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/tv_goods_num"
+                    android:layout_width="40dp"
+                    android:layout_height="24dp"
+                    android:layout_marginLeft="-0.5dp"
+                    android:layout_marginRight="-0.5dp"
+                    android:layout_toRightOf="@+id/tv_reduce_goods_num"
+                    android:background="@drawable/bg_goods_num"
+                    android:gravity="center"
+                    android:text="1"
+                    android:textColor="#000"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/tv_increase_goods_num"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_toRightOf="@+id/tv_goods_num"
+                    android:background="@drawable/bg_increase_goods_num"
+                    android:gravity="center"
+                    android:text="+"
+                    android:textColor="#000"
+                    android:textSize="16sp" />
+            </RelativeLayout>
+
+        </RelativeLayout>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btnCollction"
+        android:layout_width="60dp"
+        android:layout_height="match_parent"
+        android:background="#ecea32"
+        android:text="移入收藏"
+        android:textColor="#ffffffff"/>
+
+    <Button
+        android:id="@+id/btnDelete"
+        android:layout_width="60dp"
+        android:layout_height="match_parent"
+        android:background="#f93510"
+        android:text="删除"
+        android:textColor="#ffffffff"/>
+
+</com.mcxtzhang.swipemenulib.SwipeMenuLayout>

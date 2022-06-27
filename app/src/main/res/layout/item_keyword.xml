@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+
+    android:layout_height="wrap_content">
+    <TextView
+        android:id="@+id/item_keyword"
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:text="日用品"
+        android:layout_centerVertical="true"
+        android:textSize="15sp" />
+
+    <TextView
+        android:id="@+id/zt"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/item_keyword"
+        android:background="#979696" />
+</RelativeLayout>

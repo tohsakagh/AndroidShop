@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/person_backgrouind"
+    android:orientation="vertical"
+    android:id="@+id/zhengti">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#f93510"
+        android:orientation="horizontal">
+
+
+        <ImageView
+            android:id="@+id/iv_back"
+            android:layout_width="40dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center"
+            android:background="@drawable/back" />
+
+        <LinearLayout
+            android:id="@+id/item_searcher"
+            android:layout_width="300dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:background="@drawable/edittext_round"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/text_searcher"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="3"
+                android:background="#FFFFFFFF"
+                android:drawableLeft="@android:drawable/ic_menu_search"
+                android:hint="输入关键字搜索"
+                android:imeOptions="actionSearch"
+                android:singleLine="true"
+                android:textSize="18sp" />
+
+            <ImageView
+                android:id="@+id/delete"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginRight="0dp"
+                android:background="@drawable/delete"
+                android:layout_marginTop="5dp"
+                android:visibility="gone"/>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/to_searcher"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:text="搜索"
+            android:textColor="#FFFFFFFF"
+            android:textSize="20sp" />
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/empty"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone">
+        <ImageView
+            android:id="@+id/warning"
+            android:layout_width="130dp"
+            android:layout_height="75dp"
+            android:layout_marginTop="140dp"
+            android:src="@drawable/warning" />
+
+        <TextView
+            android:id="@+id/text1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="160dp"
+            android:layout_toRightOf="@+id/warning"
+            android:gravity="center"
+            android:text="抱歉，没有找到与“xxx“相关的商品 "
+            android:textColor="#e85c02"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/suggestion1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/warning"
+            android:layout_marginTop="10dp"
+            android:layout_toRightOf="@+id/warning"
+            android:gravity="center"
+            android:text="建议您:"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/suggestion2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/suggestion1"
+            android:layout_toRightOf="@+id/suggestion1"
+            android:gravity="center"
+            android:text="1.适当减少筛选条件"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/suggestion3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/suggestion2"
+            android:layout_toRightOf="@+id/suggestion1"
+            android:gravity="center"
+            android:text="2.尝试其他关键字"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/to_previous"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/suggestion2"
+            android:layout_marginLeft="180dp"
+            android:layout_marginTop="34dp"
+            android:gravity="center"
+            android:text="@string/previous"
+            android:textColor="#0630e5"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/warning"
+            android:layout_marginLeft="100dp"
+            android:layout_marginTop="121dp"
+            android:src="@drawable/sorry" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="单/双列"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:layout_marginLeft="20dp"/>
+
+        <ImageView
+            android:id="@+id/choose_list"
+            android:layout_width="30dp"
+            android:layout_height="25dp"
+            android:src="@drawable/onelist"
+            android:layout_marginLeft="10dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="价格"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:layout_marginLeft="200dp"/>
+
+        <ImageView
+            android:id="@+id/sort"
+            android:layout_width="30dp"
+            android:layout_height="25dp"
+            android:src="@drawable/sort"/>
+
+    </LinearLayout>
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_searcher_result"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="12dp"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_twolist"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="12dp"
+        android:visibility="gone"/>
+
+</LinearLayout>

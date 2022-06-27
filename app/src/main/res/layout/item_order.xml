@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="12dp"
+    android:descendantFocusability="blocksDescendants"
+    android:gravity="center_vertical"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tv_store_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="店铺名"
+        android:textColor="#000"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+    <RelativeLayout
+        android:id="@+id/order_goods"
+        android:layout_width="match_parent"
+        android:layout_height="121dp">
+
+        <!--商品图片-->
+        <ImageView
+            android:id="@+id/iv_goods"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_marginRight="12dp"
+            android:scaleType="fitXY"
+            android:src="@mipmap/ic_launcher" />
+
+        <TextView
+            android:id="@+id/tv_goods_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/iv_goods"
+            android:text="商品名"
+            android:textColor="#000"
+            android:textSize="16sp"
+            android:singleLine="true"
+            android:ellipsize="end"/>
+
+        <TextView
+            android:id="@+id/tv_goods_description"
+            android:layout_width="160dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_goods_name"
+            android:layout_marginTop="4dp"
+            android:layout_toRightOf="@+id/iv_goods"
+            android:text="商品描述"
+            android:singleLine="true"
+            android:ellipsize="end"
+            android:textSize="14sp" />
+
+
+        <TextView
+            android:id="@+id/tv_goods_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="6dp"
+            android:layout_marginBottom="7dp"
+            android:layout_toRightOf="@+id/iv_goods"
+            android:lines="1"
+            android:text="￥100000.00"
+            android:textColor="#DF550B"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tv_goods_num"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/tv_goods_price"
+            android:layout_below="@+id/tv_goods_description"
+            android:layout_marginLeft="18dp"
+            android:layout_marginTop="11dp"
+            android:layout_marginBottom="-11dp"
+            android:layout_toRightOf="@+id/iv_goods"
+            android:text="X 1"
+            android:textColor="#f93510"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/tv_goods_station"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="40dp"
+            android:layout_marginRight="6dp"
+            android:text="未发货"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tv_goods_cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="80dp"
+            android:layout_marginRight="4dp"
+            android:background="@drawable/textview_border_blue"
+            android:text="取消订单"
+            android:textSize="10sp" />
+
+
+        <TextView
+            android:id="@+id/zt"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@+id/iv_goods"
+            android:layout_alignParentBottom="true"
+            android:background="#2850f0" />
+
+    </RelativeLayout>
+</LinearLayout>
