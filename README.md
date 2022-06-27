@@ -1,0 +1,3 @@
+# AndroidShop
+仿淘宝android app，实现了商城的基本功能，包括购物车，订单，收藏等，可以自己开店然后发布商品，还实现了搜索功能，包含关键字搜素和搜索历史
+使用方式：在mysql中执行shop.sql中的sql指令，然后再Java代码中的utils包中的JDBCByDruid中的用户名密码换成自己的即可
